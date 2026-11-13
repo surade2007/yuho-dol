@@ -1,0 +1,255 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta property="og:type" content="website">
+<meta property="og:title" content="김유호 첫 번째 생일에 초대합니다">
+<meta property="og:description" content="2026년 11월 21일 (토) 오전 11시 30분 · 아우르 광주동명본점">
+<meta property="og:image" content="https://surade2007.github.io/yuho-dol/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:url" content="https://surade2007.github.io/yuho-dol/"><title>김유호 첫 번째 생일</title>
+
+<meta name="description" content="2026년 11월 21일 토요일 오전 11시 30분, 아우르 광주동명본점">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&family=Gowun+Dodum&display=swap">
+<style>
+/* Layout: 한 장짜리 세로 초대장 — 한지 바탕 위 좁은 단(최대 440px), 섹션 사이를 색동 띠로 나눔 */
+:root {
+  --hanji: #f8f3e9;      /* 한지 바탕 */
+  --paper: #fffdf8;      /* 카드 면 */
+  --ink: #2a2f45;        /* 먹빛 남색 본문 */
+  --soft: #6d6a74;       /* 보조 글자 */
+  --navy: #1f3a8a;       /* 돌복 쪽빛 */
+  --gold: #a9853f;       /* 금박 */
+  --line: #e6dccb;       /* 경계선 */
+  --pink: #e9a9b5;       /* 꽃잎 */
+  --saek1: #d9534f; --saek2: #f0ad4e; --saek3: #f7e06b; --saek4: #5cb85c; --saek5: #3b6fd1; --saek6: #b05cc4; /* 색동 */
+  --font-display: "Gowun Batang", "Noto Serif KR", "Batang", serif;
+  --font-body: "Gowun Dodum", "Apple SD Gothic Neo", "Malgun Gothic", sans-serif;
+  color-scheme: light;
+}
+* { box-sizing: border-box; }
+html { background: var(--hanji); }
+body {
+  margin: 0; background: var(--hanji); color: var(--ink);
+  font-family: var(--font-body); font-size: 16px; line-height: 1.75;
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+  -webkit-font-smoothing: antialiased;
+}
+main { max-width: 440px; margin: 0 auto; padding-block: 28px 56px; display: flex; flex-direction: column; gap: 44px; }
+h1, h2, .display { font-family: var(--font-display); font-weight: 700; text-wrap: balance; margin: 0; }
+p { margin: 0; }
+.eyebrow { font-family: var(--font-display); color: var(--gold); letter-spacing: .28em; font-size: 13px; text-align: center; }
+section { display: flex; flex-direction: column; gap: 18px; }
+section > h2 { font-size: 22px; text-align: center; color: var(--ink); }
+
+/* 색동 띠 */
+.saekdong { display: flex; height: 6px; width: 112px; margin: 0 auto; border-radius: 3px; overflow: hidden; }
+.saekdong i { flex: 1; }
+.saekdong i:nth-child(1){background:var(--saek1)} .saekdong i:nth-child(2){background:var(--saek2)}
+.saekdong i:nth-child(3){background:var(--saek3)} .saekdong i:nth-child(4){background:var(--saek4)}
+.saekdong i:nth-child(5){background:var(--saek5)} .saekdong i:nth-child(6){background:var(--saek6)}
+
+/* 표지 */
+.cover { gap: 22px; align-items: center; text-align: center; }
+.arch { width: 100%; aspect-ratio: 3 / 4; max-width: 100%; border-radius: 999px 999px 18px 18px; overflow: hidden;
+        border: 1px solid var(--line); box-shadow: 0 0 0 6px var(--paper), 0 0 0 7px var(--line); background: var(--paper); }
+.arch img { width: 100%; height: 100%; object-fit: cover; object-position: 50% 25%; display: block; }
+.cover .eyebrow { margin-top: 6px; }
+.cover h1 { font-size: 46px; letter-spacing: .12em; color: var(--navy); line-height: 1.2; }
+.cover .when { font-family: var(--font-display); font-size: 17px; color: var(--ink); line-height: 1.6; }
+.cover .where { color: var(--soft); font-size: 15px; }
+
+/* 인사말 */
+.letter { background: var(--paper); border: 1px solid var(--line); border-radius: 14px; padding: 28px 22px; text-align: center; gap: 20px; }
+.letter p { font-size: 15.5px; line-height: 2; }
+.letter .sign { font-family: var(--font-display); color: var(--soft); font-size: 15px; }
+
+/* 영상 */
+.video-wrap { position: relative; width: 100%; max-width: 100%; aspect-ratio: 9 / 16; border-radius: 14px; overflow: hidden; background: #000; border: 1px solid var(--line); }
+.video-wrap video { width: 100%; height: 100%; display: block; object-fit: cover; }
+.hint { text-align: center; color: var(--soft); font-size: 13.5px; }
+
+/* 달력 */
+.date-head { text-align: center; display: flex; flex-direction: column; gap: 4px; }
+.date-head .big { font-family: var(--font-display); font-size: 21px; }
+.date-head .small { color: var(--soft); font-size: 14px; }
+.cal { background: var(--paper); border: 1px solid var(--line); border-radius: 14px; padding: 18px 14px 14px; }
+.cal .month { text-align: center; font-family: var(--font-display); font-size: 17px; margin-bottom: 10px; letter-spacing: .1em; }
+.cal table { width: 100%; border-collapse: collapse; table-layout: fixed; font-variant-numeric: tabular-nums; }
+.cal th { font-weight: 400; font-size: 13px; color: var(--soft); padding-bottom: 8px; }
+.cal td { text-align: center; height: 40px; font-size: 15px; }
+.cal th:first-child, .cal td:first-child { color: #c0504d; }
+.cal th:last-child, .cal td:last-child { color: var(--navy); }
+.cal td.day span { display: inline-grid; place-items: center; width: 36px; height: 36px; border-radius: 50%;
+                   background: var(--navy); color: #fff; font-weight: 700; }
+.dday { text-align: center; font-size: 15px; }
+.dday b { color: var(--navy); font-family: var(--font-display); font-size: 18px; }
+
+/* 오시는 길 */
+.place { text-align: center; display: flex; flex-direction: column; gap: 6px; }
+.place .name { font-family: var(--font-display); font-size: 20px; }
+.place .addr { color: var(--soft); font-size: 15px; user-select: all; }
+.btns { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+.btn { display: flex; align-items: center; justify-content: center; gap: 8px; min-height: 50px; padding: 10px 12px;
+       border-radius: 12px; border: 1px solid var(--line); background: var(--paper); color: var(--ink);
+       font: inherit; font-size: 15px; text-decoration: none; cursor: pointer; }
+.btn:focus-visible { outline: 3px solid var(--navy); outline-offset: 2px; }
+.btn .dot { width: 18px; height: 18px; border-radius: 5px; flex: none; display: inline-grid; place-items: center;
+            font-size: 11px; font-weight: 700; color: #fff; font-family: var(--font-body); }
+.btn.naver .dot { background: #03c75a; }
+.btn.kakao .dot { background: #fee500; color: #3a1d1d; }
+.btn.copy { grid-column: 1 / -1; }
+.btn.copy .dot { background: var(--gold); }
+.copied { text-align: center; color: var(--navy); font-size: 14px; min-height: 1.5em; }
+
+/* 사진 */
+.gallery { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; }
+.gallery button { padding: 0; border: 0; border-radius: 10px; overflow: hidden; aspect-ratio: 3 / 4; cursor: zoom-in; background: var(--paper); }
+.gallery img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.gallery button:focus-visible { outline: 3px solid var(--navy); outline-offset: 2px; }
+.viewer { position: fixed; inset: 0; z-index: 20; background: rgba(20, 22, 34, .92); display: grid; place-items: center;
+          padding: max(16px, env(safe-area-inset-top, 0px)) max(16px, env(safe-area-inset-right, 0px)) max(16px, env(safe-area-inset-bottom, 0px)) max(16px, env(safe-area-inset-left, 0px)); }
+.viewer img { max-height: 86vh; max-width: 100%; border-radius: 10px; }
+.viewer .close { position: absolute; top: calc(12px + env(safe-area-inset-top, 0px)); right: calc(12px + env(safe-area-inset-right, 0px));
+                 width: 44px; height: 44px; border-radius: 50%; border: 0; background: rgba(255,255,255,.18); color: #fff; font-size: 22px; cursor: pointer; }
+
+footer { text-align: center; color: var(--soft); font-size: 13px; display: flex; flex-direction: column; gap: 10px; }
+
+@media (prefers-reduced-motion: no-preference) {
+  .cover .arch { animation: rise .9s ease-out both; }
+  @keyframes rise { from { transform: translateY(8px); } to { transform: none; } }
+}
+</style>
+</head>
+<body>
+<main>
+  <section class="cover" aria-label="표지">
+    <div class="arch"><img src="photo-smile.jpg" alt="돌복을 입고 웃는 유호"></div>
+    <p class="eyebrow">첫 번째 생일</p>
+    <h1>김유호</h1>
+    <div class="saekdong" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i></div>
+    <p class="when">2026년 11월 21일 토요일<br>오전 11시 30분</p>
+    <p class="where">아우르 광주동명본점</p>
+  </section>
+
+  <section class="letter" aria-label="초대의 글">
+    <p class="eyebrow">초대합니다</p>
+    <p>작은 손으로 세상을 하나씩 알아가던 유호가<br>어느덧 첫 번째 생일을 맞이했습니다.</p>
+    <p>지난 일 년 동안 따뜻한 사랑으로<br>함께해 주신 분들을 모시고<br>감사한 마음을 나누려 합니다.</p>
+    <p>오셔서 유호의 돌잡이도 함께 지켜봐 주시고<br>앞날을 축복해 주세요.</p>
+    <p class="sign">유호 엄마 · 아빠 드림</p>
+  </section>
+
+  <section aria-labelledby="h-video">
+    <p class="eyebrow">VIDEO</p>
+    <h2 id="h-video">유호의 초대 인사</h2>
+    <div class="video-wrap">
+      <video id="invite-video" src="invite.mp4" poster="poster.jpg" controls playsinline preload="metadata"></video>
+    </div>
+    <p class="hint">▶ 눌러서 유호의 목소리를 들어보세요</p>
+  </section>
+
+  <section aria-labelledby="h-date">
+    <p class="eyebrow">DATE</p>
+    <h2 id="h-date">날짜</h2>
+    <div class="date-head">
+      <span class="big">2026년 11월 21일 토요일</span>
+      <span class="small">오전 11시 30분</span>
+    </div>
+    <div class="cal">
+      <div class="month">2026 · 11</div>
+      <table aria-label="2026년 11월 달력, 21일 표시">
+        <thead><tr><th>일</th><th>월</th><th>화</th><th>수</th><th>목</th><th>금</th><th>토</th></tr></thead>
+        <tbody>
+          <tr><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td><td>6</td><td>7</td></tr>
+          <tr><td>8</td><td>9</td><td>10</td><td>11</td><td>12</td><td>13</td><td>14</td></tr>
+          <tr><td>15</td><td>16</td><td>17</td><td>18</td><td>19</td><td>20</td><td class="day"><span>21</span></td></tr>
+          <tr><td>22</td><td>23</td><td>24</td><td>25</td><td>26</td><td>27</td><td>28</td></tr>
+          <tr><td>29</td><td>30</td><td></td><td></td><td></td><td></td><td></td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="dday" id="dday">유호의 첫 생일잔치</p>
+  </section>
+
+  <section aria-labelledby="h-place">
+    <p class="eyebrow">LOCATION</p>
+    <h2 id="h-place">오시는 길</h2>
+    <div class="place">
+      <span class="name">아우르 광주동명본점</span>
+      <span class="addr" id="addr">전남광주 동구 동명로14번길 45-21</span>
+    </div>
+    <div class="btns">
+      <a class="btn naver" href="https://map.naver.com/p/search/%EC%95%84%EC%9A%B0%EB%A5%B4%20%EA%B4%91%EC%A3%BC%EB%8F%99%EB%AA%85%EB%B3%B8%EC%A0%90" target="_blank" rel="noopener"><span class="dot">N</span>네이버 지도</a>
+      <a class="btn kakao" href="https://map.kakao.com/link/search/%EC%95%84%EC%9A%B0%EB%A5%B4%20%EA%B4%91%EC%A3%BC%EB%8F%99%EB%AA%85%EB%B3%B8%EC%A0%90" target="_blank" rel="noopener"><span class="dot">K</span>카카오맵</a>
+      <button class="btn copy" id="copy-addr" type="button"><span class="dot">⧉</span>주소 복사하기</button>
+    </div>
+    <p class="copied" id="copied" aria-live="polite"></p>
+  </section>
+
+  <section aria-labelledby="h-gallery">
+    <p class="eyebrow">GALLERY</p>
+    <h2 id="h-gallery">유호의 돌 사진</h2>
+    <div class="gallery">
+      <button type="button" data-src="photo-standing.jpg"><img src="photo-standing.jpg" alt="달항아리를 잡고 서 있는 유호" loading="lazy"></button>
+      <button type="button" data-src="photo-wide.jpg"><img src="photo-wide.jpg" alt="달항아리 옆에 앉아 있는 유호" loading="lazy"></button>
+      <button type="button" data-src="photo-laugh.jpg"><img src="photo-laugh.jpg" alt="크게 웃는 유호" loading="lazy"></button>
+    </div>
+  </section>
+
+  <footer>
+    <div class="saekdong" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i></div>
+    <p>귀한 걸음 해주셔서 감사합니다</p>
+  </footer>
+</main>
+
+<div class="viewer" id="viewer" hidden role="dialog" aria-modal="true" aria-label="사진 크게 보기">
+  <button class="close" id="viewer-close" type="button" aria-label="닫기">✕</button>
+  <img id="viewer-img" alt="">
+</div>
+
+<script>
+(function () {
+  // D-day (한국 시간 기준)
+  var target = Date.UTC(2026, 10, 21); // 2026-11-21
+  var now = new Date();
+  var kst = new Date(now.getTime() + 9 * 3600 * 1000);
+  var today = Date.UTC(kst.getUTCFullYear(), kst.getUTCMonth(), kst.getUTCDate());
+  var diff = Math.round((target - today) / 86400000);
+  var el = document.getElementById('dday');
+  if (diff > 0) el.innerHTML = '유호의 첫 생일잔치까지 <b>' + diff + '일</b> 남았어요';
+  else if (diff === 0) el.innerHTML = '<b>오늘</b>은 유호의 첫 생일잔치 날이에요';
+  else el.textContent = '함께해 주셔서 감사합니다';
+
+  // 주소 복사
+  var btn = document.getElementById('copy-addr'), msg = document.getElementById('copied'), addr = document.getElementById('addr');
+  function selectAddr() { var r = document.createRange(); r.selectNodeContents(addr); var s = getSelection(); s.removeAllRanges(); s.addRange(r); }
+  btn.addEventListener('click', function () {
+    var text = addr.textContent.trim();
+    var done = function () { msg.textContent = '주소를 복사했어요'; };
+    var fail = function () { selectAddr(); msg.textContent = '주소를 선택했어요. 길게 눌러 복사해 주세요'; };
+    try {
+      if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(text).then(done, fail);
+      else fail();
+    } catch (e) { fail(); }
+  });
+
+  // 사진 크게 보기
+  var viewer = document.getElementById('viewer'), vimg = document.getElementById('viewer-img');
+  document.querySelectorAll('.gallery button').forEach(function (b) {
+    b.addEventListener('click', function () { vimg.src = b.dataset.src; vimg.alt = b.querySelector('img').alt; viewer.hidden = false; document.getElementById('viewer-close').focus(); });
+  });
+  function closeViewer() { viewer.hidden = true; }
+  document.getElementById('viewer-close').addEventListener('click', closeViewer);
+  viewer.addEventListener('click', function (e) { if (e.target === viewer) closeViewer(); });
+  document.addEventListener('keydown', function (e) { if (e.key === 'Escape') closeViewer(); });
+})();
+</script>
+
+</body>
+</html>
