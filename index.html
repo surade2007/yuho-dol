@@ -112,6 +112,7 @@ section > h2 { font-size: 22px; text-align: center; color: var(--ink); }
 /* 사진 */
 .gallery { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; }
 .gallery button { padding: 0; border: 0; border-radius: 10px; overflow: hidden; aspect-ratio: 3 / 4; cursor: zoom-in; background: var(--paper); }
+.gallery button.wide { grid-column: 1 / -1; aspect-ratio: 4 / 3; }
 .gallery img { width: 100%; height: 100%; object-fit: cover; display: block; }
 .gallery button:focus-visible { outline: 3px solid var(--navy); outline-offset: 2px; }
 .viewer { position: fixed; inset: 0; z-index: 20; background: rgba(20, 22, 34, .92); display: grid; place-items: center;
@@ -198,9 +199,22 @@ footer { text-align: center; color: var(--soft); font-size: 13px; display: flex;
     <p class="eyebrow">GALLERY</p>
     <h2 id="h-gallery">유호의 돌 사진</h2>
     <div class="gallery">
+      <button type="button" data-src="photo-jar-close.jpg"><img src="photo-jar-close.jpg" alt="달항아리를 안고 바라보는 유호" loading="lazy"></button>
       <button type="button" data-src="photo-standing.jpg"><img src="photo-standing.jpg" alt="달항아리를 잡고 서 있는 유호" loading="lazy"></button>
-      <button type="button" data-src="photo-wide.jpg"><img src="photo-wide.jpg" alt="달항아리 옆에 앉아 있는 유호" loading="lazy"></button>
+      <button type="button" data-src="photo-sit-smile.jpg"><img src="thumb-sit-smile.jpg" alt="꽃 옆에 앉아 웃는 유호" loading="lazy"></button>
+      <button type="button" data-src="photo-cry.jpg"><img src="photo-cry.jpg" alt="얼굴을 찡그리며 우는 유호" loading="lazy"></button>
       <button type="button" data-src="photo-laugh.jpg"><img src="photo-laugh.jpg" alt="크게 웃는 유호" loading="lazy"></button>
+      <button type="button" data-src="photo-flower.jpg"><img src="photo-flower.jpg" alt="꽃 너머로 보이는 유호" loading="lazy"></button>
+      <button type="button" data-src="photo-smile.jpg"><img src="photo-smile.jpg" alt="돌복을 입고 웃는 유호" loading="lazy"></button>
+      <button type="button" data-src="photo-jar-side.jpg"><img src="thumb-jar-side.jpg" alt="달항아리를 짚고 옆을 보는 유호" loading="lazy"></button>
+      <button type="button" data-src="photo-wide.jpg"><img src="photo-wide.jpg" alt="달항아리 옆에 앉아 있는 유호" loading="lazy"></button>
+      <button type="button" data-src="photo-jar-hold.jpg"><img src="thumb-jar-hold.jpg" alt="달항아리에 기대 선 유호" loading="lazy"></button>
+      <button type="button" data-src="photo-serious.jpg"><img src="photo-serious.jpg" alt="진지한 표정의 유호" loading="lazy"></button>
+      <button type="button" data-src="photo-jar-look.jpg"><img src="thumb-jar-look.jpg" alt="달항아리를 잡고 정면을 보는 유호" loading="lazy"></button>
+      <button type="button" data-src="photo-peek-smile.jpg"><img src="thumb-peek-smile.jpg" alt="손에 턱을 괴고 들여다보는 유호" loading="lazy"></button>
+      <button type="button" data-src="photo-peek-tongue.jpg"><img src="thumb-peek-tongue.jpg" alt="혀를 내밀고 들여다보는 유호" loading="lazy"></button>
+      <button type="button" data-src="photo-peek-grin.jpg"><img src="thumb-peek-grin.jpg" alt="이를 보이며 웃는 유호" loading="lazy"></button>
+      <button type="button" class="wide" data-src="photo-penguin.jpg"><img src="thumb-penguin.jpg" alt="펭귄 장난감을 들고 앉아 있는 유호" loading="lazy"></button>
     </div>
   </section>
 
